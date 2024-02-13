@@ -15,12 +15,12 @@ To complete this tutorial, you need a cursory knowledge of the Structured Query
 Language (SQL). The tutorial walks you through each SQL command, but it is
 helpful if you've seen SQL before.
 
-*   To start, [install TimescaleDB][install-timescale].
-*   Next setup Grafana.
+To start, [install TimescaleDB][install-timescale]. Then [install Grafana][install-Grafana] and 
+
 
 Once your installation of TimescaleDB and Grafana are complete, ingest the data found
-in the NYC Taxi Cab tutorial and configure Grafana to connect
-to that database. Be sure to follow the full tutorial if you're interested in background
+in the NYC Taxi Cab tutorial. Since you have already set up your Grafana connection, you're 
+all set to proceed. Be sure to follow the full tutorial if you're interested in background
 on how to use TimescaleDB.
 
 ### Creating a variable
@@ -42,11 +42,11 @@ There are several types of payments, which we can see in the `payment_types` tab
 (6 rows)
 ```
 
-Grafana includes many types of variables, and variables in Grafana function just like
-variables in programming languages. We define a variable, and then we can reference it
-in our queries.
+Variables in Grafana function just like variables in programming languages, and Grafana includes many 
+types suitable for your unique needs. Read on to learn how to define a variable, and then reference 
+it in your queries.
 
-#### Define a new Grafana variable
+#### Defining a new Grafana variable
 
 To create a new variable, go to your Grafana dashboard settings, navigate to the 'Variable'
 option in the side-menu, and then click the 'Add variable' button.
@@ -83,6 +83,7 @@ named `$payment_type`.
 
 Let's modify our earlier query like so:
 
+*This command no longer works with the updated Grafana interface*
 ```sql
 SELECT time_bucket('5m', rides.pickup_datetime) AS time,
        rides.trip_distance AS value,
@@ -117,6 +118,7 @@ selected so that we can see those queries side-by-side.
 Let's first create a new graph panel that uses the `$payment_type` variable.
 This is your query:
 
+*This command no longer works with the updated Grafana interface*
 ```sql
 SELECT
   --1--
@@ -226,8 +228,8 @@ Your dashboard should look something like this:
 
 <img class="main-content__illustration" src="https://assets.iobeam.com/images/docs/screenshots-for-grafana-tutorial/grafana_dynamic_panels.png" alt="Dynamic panels in Grafana"/>
 
-### Summary
+### Conclusion
 
-Complete your Grafana knowledge by following all the TimescaleDB + Grafana tutorials.
+Curious about Complete your Grafana knowledge by following all the TimescaleDB + Grafana tutorials.
 
 [install-timescale]: /getting-started/latest/
