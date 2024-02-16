@@ -1,11 +1,11 @@
 ---
-title: Connect TimescaleDB and Grafana
+title: Get Started with TimescaleDB and Grafana
 excerpt: Connect Timescale to Grafana to visualize your data
 products: [cloud, mst]
 keywords: [Grafana, visualizations, analytics]
 ---
 
-# Connect TimescaleDB and Grafana
+# Get Started with TimescaleDB and Grafana
 
 Grafana ships with built-in Prometheus, PostgreSQL, Jaeger, and other data
 source plugins that allow you to query and visualize data from a compatible
@@ -33,7 +33,7 @@ and then configure Timescale as the data source in Grafana.
 
 1.  Sign in to the [Timescale portal][tsc-portal].
 1.  Click `Create service`.
-1.  Click `Download the cheatsheet`. This `.sql` file contains the credentials
+1.  Click `Download the config`. This `.sql` file contains the credentials
     that you require to configure TimescaleDB as a data source on Grafana.
 
 </Procedure>
@@ -45,7 +45,7 @@ and then configure Timescale as the data source in Grafana.
 To configure TimescaleDB service on Timescale with your Grafana
 installation, log in to Grafana and proceed to step 5 in this procedure.
 
-1.  Sign in to your Managed Service for Timescale account, and click the name of
+1.  Sign in to your Timescale account, and click the name of
     your new Grafana service.
 1.  On the service details page, take a note of the `User` and `Password` field for
     your service.
