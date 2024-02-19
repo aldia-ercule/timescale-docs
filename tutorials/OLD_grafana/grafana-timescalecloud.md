@@ -34,7 +34,7 @@ and then configure Timescale as the data source in Grafana.
 1.  Sign in to the [Timescale portal][tsc-portal].
 1.  Click `Create service`.
 1.  Click `Download the config`. This `.sql` file contains the credentials
-    that you require to configure TimescaleDB as a data source on Grafana.
+    that you'll use later to configure TimescaleDB as a data source on Grafana.
 
 </Procedure>
 
