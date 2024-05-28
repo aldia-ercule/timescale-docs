@@ -6,8 +6,6 @@ keywords: [Grafana, visualization, analytics]
 tags: [pie chart]
 ---
 
-import GrafanaVizPrereqs from 'versionContent/_partials/_grafana-viz-prereqs.mdx';
-
 # Build a pie chart in Grafana
 
 Pie charts are used to plot categorized data. The chart presents each
@@ -34,7 +32,7 @@ same information. This tutorial shows you how to create both.
 
 ## Prerequisites
 
-<GrafanaVizPrereqs />
+
 
 ## Create a pie chart with pre-aggregated data
 
@@ -62,7 +60,7 @@ Create a pie chart visualization using the data in the table `stocks_real_time`.
 1.  Fetch all company symbols from the dataset in the
    [Getting Started Tutorial][gsg-data] with this query:
 
-   ```sql
+    ```sql
     SELECT
         DISTINCT symbol FROM company ORDER BY symbol ASC;
     ```
