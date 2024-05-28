@@ -17,10 +17,19 @@
       "pattern": "^https://mvnrepository.com"
     },
     {
+      "pattern": "^https://platform.openai.com/docs"
+    },
+    {
+      "pattern": "^https://www.pcmag.com/encyclopedia"
+    },
+    {
       "pattern": "^https://www.microsoft.com/en-us/download/details.aspx?"
     },
     {
       "pattern": "^https://opensea.io/"
+    },
+    {
+      "pattern": "^https://www.techopedia.com/definition/31996/hash-partitioning"
     },
     {
       "pattern": "^https://docs.github.com/"

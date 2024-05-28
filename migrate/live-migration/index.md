@@ -26,8 +26,6 @@ this means that you may run into the following shortcomings:
   replicated).
 - Live migration does not yet support mutable compression (`INSERT`, `UPDATE`,
   `DELETE` on compressed data).
-- In most cases it is not possible to resume a failed migration, and must be
-  restarted from the beginning.
 - By default, numeric fields containing `NaN`/`+Inf`/`-Inf` values are not
   correctly replicated, and will be converted to `NULL`. A workaround is
   available, but is not enabled by default.
@@ -68,8 +66,11 @@ For more information, refer to the step-by-step migration guide:
 If you are migrating from AWS RDS to Timescale, you can refer to [this][live-migration-playbook] playbook
 for a detailed migration guide.
 
+If you encounter any issues or have questions about live migration, refer to the [FAQ] section.
+
 [from-postgres]: /migrate/:currentVersion:/live-migration/live-migration-from-postgres/
 [from-timescaledb]: /migrate/:currentVersion:/live-migration/live-migration-from-timescaledb/
 [pg-dump-and-restore]: /migrate/:currentVersion:/pg-dump-and-restore/
 [dual-write and backfill]: /migrate/:currentVersion:/dual-write-and-backfill/
 [live-migration-playbook]: /migrate/:currentVersion:/playbooks/rds-timescale-live-migration/
+[FAQ]: /migrate/:currentVersion:/live-migration/live-migration-faq/

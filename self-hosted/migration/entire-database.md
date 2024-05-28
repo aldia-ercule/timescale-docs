@@ -14,13 +14,14 @@ databases, consider [migrating your schema and data
 separately][migrate-separately].
 
 <Highlight type="warning">
+
 Depending on your database size and network speed, migration can take a very
 long time. You can continue reading from your source database during this time,
 though performance could be slower. To avoid this problem, fork your database
 and migrate your data from the fork. If you write to tables in your source
 database during the migration, the new writes might not be transferred to
-Timescale. To avoid this problem, see the section on [migrating an active
-database](/use-timescale/latest/migrate-db/).
+Timescale. To avoid this problem, see [Live migration][live-migration].
+
 </Highlight>
 
 ## Prerequisites
@@ -46,11 +47,12 @@ Before you begin, check that you have:
     [upgrading Timescale section][upgrading-timescaledb].
 
 <Highlight type="note">
+
 To speed up migration, compress your data. You can compress any chunks where
 data is not being currently inserted, updated, or deleted. When you finish the
 migration, you can decompress chunks as needed for normal operation. For more
-information about compression and decompression, see the
-[compression section](https://docs.timescale.com/self-hosted/latest/compression/).
+information about compression and decompression, see [Compression][compression].
+
 </Highlight>
 
 <Procedure>
@@ -117,7 +119,9 @@ information about compression and decompression, see the
 [pg_dump]: https://www.postgresql.org/docs/current/app-pgdump.html
 [pg_restore]: https://www.postgresql.org/docs/current/app-pgrestore.html
 [psql]: /use-timescale/:currentVersion:/integrations/query-admin/about-psql/
-[timescaledb_pre_restore]: /api/:currentVersion:/administration/timescaledb_pre_restore/
-[timescaledb_post_restore]: /api/:currentVersion:/administration/timescaledb_post_restore/
+[timescaledb_pre_restore]: /api/:currentVersion:/administration/#timescaledb_pre_restore
+[timescaledb_post_restore]: /api/:currentVersion:/administration/#timescaledb_post_restore
 [upgrading-postgresql-self-hosted]: /self-hosted/:currentVersion:/upgrades/upgrade-pg/
 [upgrading-timescaledb]: /self-hosted/:currentVersion:/upgrades/major-upgrade/
+[live-migration]: /migrate/:currentVersion:/live-migration/
+[compression]: /use-timescale/:currentVersion:/compression/
